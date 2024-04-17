@@ -3,8 +3,14 @@ import Projectcard from '../../components/Projectcard/Projectcard';
 import './Projects.css';
 import Image1 from './junk-yard-cars-yard-junk.jpg';
 
+import { Navigation} from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+
 import 'swiper/swiper-bundle.css';
+import 'swiper/css';
+import 'swiper/css/navigation';
+
+
 
 const projects = [
   {
@@ -52,13 +58,14 @@ const projects = [
 ];
 
 
+
 const Projects = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 620);
 
   useEffect(() => {
-    window.addEventListener("resize", () => {
-      setIsMobile(window.innerWidth < 620);
-    });
+    const handleResize = () => setIsMobile(window.innerWidth < 620);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
@@ -76,8 +83,10 @@ const Projects = () => {
         ))
       ) : (
         <Swiper
+          modules={[Navigation]}
           spaceBetween={50} 
           slidesPerView={3}
+          navigation={true}
           onSlideChange={() => console.log('slide change')}
           onSwiper={(swiper) => console.log(swiper)}
         >
@@ -96,5 +105,6 @@ const Projects = () => {
     </div>
   );
 }
+
 
 export default Projects;
