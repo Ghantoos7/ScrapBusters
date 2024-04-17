@@ -8,16 +8,16 @@ const Navbar = () => {
     <nav className="navbar">
       <ul className="nav-links">
         <li>
-          <Link to="home" spy={true} smooth={true} offset={-70} duration={500}>Home</Link>
+          <Link to="home" spy={true} smooth={true} offset={-40} duration={500}>Home</Link>
         </li>
         <li>
-          <Link to="projects" spy={true} smooth={true} offset={-70} duration={500}>Projects</Link>
+          <Link to="projects" spy={true} smooth={true} offset={-40} duration={500}>Projects</Link>
         </li>
         <li>
-          <Link to="team" spy={true} smooth={true} offset={-70} duration={500}>Team</Link>
+          <Link to="team" spy={true} smooth={true} offset={-40} duration={500}>Team</Link>
         </li>
         <li>
-          <Link to="faq" spy={true} smooth={true} offset={-70} duration={500}>FAQ</Link>
+          <Link to="faq" spy={true} smooth={true} offset={-40} duration={500}>FAQ</Link>
         </li>
       </ul>
     </nav>
