@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Projectcard from '../../components/Projectcard/Projectcard';
 import './Projects.css';
 import Image1 from './junk-yard-cars-yard-junk.jpg';
@@ -53,26 +53,46 @@ const projects = [
 
 
 const Projects = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 620);
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setIsMobile(window.innerWidth < 620);
+    });
+  }, []);
+
   return (
     <div className="Project-container">
       <h1>Projects</h1>
-      <Swiper
-  spaceBetween={50} 
-  slidesPerView={3} 
-  onSlideChange={() => console.log('slide change')}
-  onSwiper={(swiper) => console.log(swiper)}
->
-  {projects.map((project, index) => (
-    <SwiperSlide key={index}>
-      <Projectcard 
-        title={project.title} 
-        description={project.description} 
-        technologies={project.technologies}
-        image={project.image} 
-      />
-    </SwiperSlide>
-  ))}
-</Swiper>
+      {isMobile ? (
+        projects.map((project, index) => (
+          <Projectcard 
+            key={index}
+            title={project.title} 
+            description={project.description} 
+            technologies={project.technologies}
+            image={project.image} 
+          />
+        ))
+      ) : (
+        <Swiper
+          spaceBetween={50} 
+          slidesPerView={3}
+          onSlideChange={() => console.log('slide change')}
+          onSwiper={(swiper) => console.log(swiper)}
+        >
+          {projects.map((project, index) => (
+            <SwiperSlide key={index}>
+              <Projectcard 
+                title={project.title} 
+                description={project.description} 
+                technologies={project.technologies}
+                image={project.image} 
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      )}
     </div>
   );
 }
