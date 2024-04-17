@@ -1,35 +1,40 @@
 .navbar {
-    background-color: #333;
-    color: white;
-    padding: 10px 10px;
-    position: fixed;
-    width: 100%;
-
-    
+  background-color: #333;
+  color: white;
+  padding: 10px 10px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2); /* Add a subtle shadow to give depth */
+  transition: background-color 0.5s ease; /* Transition for background color change */
 }
-  
-  .nav-links {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-  
-  .nav-links li {
-    margin: 0 15px;
-  }
-  
-  .nav-links li a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  .nav-links li a:hover {
-    color: #ffdd40;
-    cursor: pointer;
-  }
-  
+
+.navbar:hover {
+  background-color: #444; /* Darken the navbar on hover */
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end; 
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s; /* Add transition for transform */
+  padding: 10px 15px; /* Add padding to links */
+}
+
+.nav-links li a:hover {
+  color: #ffdd40;
+  cursor: pointer;
+  transform: scale(1.1); /* Slightly increase size of link on hover */
+}

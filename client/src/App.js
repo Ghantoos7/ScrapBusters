@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import Home from './pages/Home';
+import Home from './pages/Home/Home';
 import Projects from './pages/Projects';
 import Team from './pages/Team';
 import FAQ from './pages/FAQ';
