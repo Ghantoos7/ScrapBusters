@@ -1,63 +1,56 @@
 .home {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    display: flex; /* Adjust to use flexbox for splitting */
-    filter: grayscale(60%); /* Reduced intensity */
-  }
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 50px;
+  box-sizing: border-box;
   
-  .home .left, .home .right {
-    flex: 1; /* Split screen into two equal parts */
+  overflow: hidden;
+}
+
+.left {
+  max-width: 600px; 
+  padding: 20px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.subheader, .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.subheader {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.content h1 {
+  font-size: 3rem;
+  margin: 20px 0;
+  position: relative;
+  animation: fadeIn 1s ease-out;
+}
+
+.content p {
+  font-size: 1.5rem;
+  animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .left {
-    background-color: #3498db; /* Example blue color */
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .right {
-    background-color: #e74c3c; /* Example red color */
-  }
-  
-  .content {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    flex-direction: column;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    width: 100%; 
-  }
-  
-  .content h1, .content p {
-    margin: 0; 
-  }
-  
-  .content h1 {
-    font-size: 3rem;
-  }
-  
-  .content p {
-    font-size: 1.5rem;
-    color: white; 
-  }
-  
-  @keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
-  }
-  
-  @keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: black; }
-  }
-  
-  .typing-effect {
-    overflow: hidden; 
-    white-space: nowrap; 
-    border-right: 3px solid;
-    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
-  }
-  
+}
