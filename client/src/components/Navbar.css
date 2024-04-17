@@ -1,16 +1,21 @@
 .navbar {
     background-color: #333;
     color: white;
-    padding: 10px 20px;
-    text-align: center;
-  }
+    padding: 10px 10px;
+    position: fixed;
+    width: 100%;
+
+    
+}
   
   .nav-links {
     list-style-type: none;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0;
+    width: 100%;
   }
   
   .nav-links li {
@@ -25,5 +30,6 @@
   
   .nav-links li a:hover {
     color: #ffdd40;
+    cursor: pointer;
   }
   
