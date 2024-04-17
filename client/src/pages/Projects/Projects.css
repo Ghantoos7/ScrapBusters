@@ -17,7 +17,7 @@
 
 /* Styles for the project cards */
 .project-card {
-    width: 350px;
+    width: 100%;
     padding: 30px;
     margin: 20px;
     box-sizing: border-box;

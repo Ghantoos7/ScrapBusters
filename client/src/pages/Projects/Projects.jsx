@@ -57,8 +57,8 @@ const Projects = () => {
     <div className="Project-container">
       <h1>Projects</h1>
       <Swiper
-  spaceBetween={1} 
-  slidesPerView={4} 
+  spaceBetween={50} 
+  slidesPerView={3} 
   onSlideChange={() => console.log('slide change')}
   onSwiper={(swiper) => console.log(swiper)}
 >

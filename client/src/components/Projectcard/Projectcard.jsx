@@ -42,6 +42,7 @@ function Projectcard({ title, description, technologies, image }) {
           <img key={index} src={techLogos[tech]} alt={tech} className="technology-logo" />
         ))}
       </div>
+      <a href="https://www.google.com" target="_blank" rel="noopener noreferrer"></a> 
     </div>
   );
 }
