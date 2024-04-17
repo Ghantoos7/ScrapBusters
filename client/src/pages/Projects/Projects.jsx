@@ -3,6 +3,8 @@ import Projectcard from '../../components/Projectcard/Projectcard';
 import './Projects.css';
 import Image1 from './junk-yard-cars-yard-junk.jpg';
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.css';
 
 const projects = [
   {
@@ -54,15 +56,23 @@ const Projects = () => {
   return (
     <div className="Project-container">
       <h1>Projects</h1>
-      {projects.map((project, index) => (
-        <Projectcard 
-          key={index} 
-          title={project.title} 
-          description={project.description} 
-          technologies={project.technologies}
-          image={project.image} 
-        />
-      ))}
+      <Swiper
+  spaceBetween={1} 
+  slidesPerView={4} 
+  onSlideChange={() => console.log('slide change')}
+  onSwiper={(swiper) => console.log(swiper)}
+>
+  {projects.map((project, index) => (
+    <SwiperSlide key={index}>
+      <Projectcard 
+        title={project.title} 
+        description={project.description} 
+        technologies={project.technologies}
+        image={project.image} 
+      />
+    </SwiperSlide>
+  ))}
+</Swiper>
     </div>
   );
 }
