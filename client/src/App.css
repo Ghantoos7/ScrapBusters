@@ -109,3 +109,7 @@ h1 {
   background-color: var(--primary-color);
   transition: background-color var(--transitiontime);
 }
+
+a {
+  text-decoration: none;
+}

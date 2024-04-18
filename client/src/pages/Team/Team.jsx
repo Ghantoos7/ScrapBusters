@@ -22,7 +22,9 @@ const teamMembers = [
     title: 'Senior Data Scientist',
     message: 'Welcome message 1',
     quote: 'Quote 1',
-    image: IshanshImage
+    image: IshanshImage,
+    linkedin: 'https://www.linkedin.com/in/ishansh-gupta/',
+
   },
 
   {
@@ -30,7 +32,9 @@ const teamMembers = [
     title: 'Senior Data Scientist',
     message: 'Welcome message 2',
     quote: 'Quote 2',
-    image: LouisImage
+    image: LouisImage,
+    linkedin: 'https://www.linkedin.com/in/louisheublein/',
+
   },
 
   {
@@ -38,7 +42,8 @@ const teamMembers = [
     title: 'Software Engineering Intern',
     message: 'Welcome message 4',
     quote: 'Quote 4',
-    image: Mysteryguy
+    image: Mysteryguy,
+    linkedin:  'https://www.linkedin.com/in/georgio-ghnatios-33a295222/',
   },
 
   {
@@ -46,7 +51,8 @@ const teamMembers = [
     title: 'Senior Data Science Intern',
     message: 'Welcome message 3',
     quote: 'Quote 3',
-    image: SharbelImage
+    image: SharbelImage,
+    linkedin: 'https://www.linkedin.com/in/sharbelabousabha/',
   },
 
 
