@@ -16,13 +16,19 @@ const FAQ = () => {
 
   return (
     <div className="faq-container">
-      <h1>Frequently Asked Questions</h1>
-      <p>Answers to frequently asked questions about our processes and technologies.</p>
+      <div className="header-container">
+        <h1><span className="arrow">&gt;</span> FAQ</h1>
+        <div className="guru-container">
+          <span className="circle circle1f"></span>
+          <span className="circle circle2"></span>
+          <span className="circle circle3"></span>
+        </div>
+      </div>
       {faqs.map((faq, index) => (
-        <Accordion 
-          key={index} 
-          title={faq.title} 
-          content={faq.content} 
+        <Accordion
+          key={index}
+          title={faq.title}
+          content={faq.content}
           isOpen={openIndex === index}
           onTitleClick={() => setOpenIndex(openIndex === index ? null : index)}
         />

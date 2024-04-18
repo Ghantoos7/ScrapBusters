@@ -3,6 +3,7 @@
     flex-direction: column;
     text-align: center;
     margin-bottom: 128px;
+    padding: 20px;
 }
 
 .faq-container h1 {
@@ -16,4 +17,7 @@
     margin-bottom: 40px;
 }
 
+.circle1f{
+    background : var(--accent-color);
+}
 
