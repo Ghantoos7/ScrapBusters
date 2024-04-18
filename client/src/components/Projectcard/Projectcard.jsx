@@ -31,7 +31,7 @@ const techLogos = {
   'Terraform': TerraformLogo,
 };
 
-function Projectcard({ title, description, technologies, image }) {
+function Projectcard({ title, description, technologies, image, link }) {
   return (
     <div className="project-card">
       <img src={image} alt={`${title} project`} className="project-image" />
@@ -42,7 +42,8 @@ function Projectcard({ title, description, technologies, image }) {
           <img key={index} src={techLogos[tech]} alt={tech} className="technology-logo" />
         ))}
       </div>
-      <a href="https://www.google.com" target="_blank" rel="noopener noreferrer"></a> 
+      <a href={link || "https://www.google.com"} aria-label="More about the project" target="_blank" rel="noopener noreferrer">
+      </a>
     </div>
   );
 }
