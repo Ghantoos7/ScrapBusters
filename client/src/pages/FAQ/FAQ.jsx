@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Accordion from '../../components/Accordion/Accordion';
 import './FAQ.css';
-
 const FAQ = () => {
   const faqs = [
     { title: 'What is Quality Management?', content: 'Placeholder for an explanation of what quality management involves at ScrapBusters Inc.' },
