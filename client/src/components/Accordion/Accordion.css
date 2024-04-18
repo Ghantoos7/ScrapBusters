@@ -17,6 +17,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #f7f7f7;
   }
   
   .accordion-title.open {

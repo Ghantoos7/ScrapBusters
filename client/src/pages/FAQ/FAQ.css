@@ -1,0 +1,18 @@
+.faq-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.faq-container h1 {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+.faq-container p {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+
