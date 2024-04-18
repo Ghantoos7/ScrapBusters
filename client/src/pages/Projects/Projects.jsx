@@ -60,13 +60,14 @@ const projects = [
 
 
 const Projects = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 620);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 769);
 
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 620);
+    const handleResize = () => setIsMobile(window.innerWidth < 769);
     window.addEventListener("resize", handleResize);
+    handleResize(); 
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+}, []);
 
   return (
     <div className="Project-container">
