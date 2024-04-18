@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './components/Navbar/Navbar';
+import Footer from './pages/Footer/Footer';
 import Home from './pages/Home/Home';
 import Projects from './pages/Projects/Projects';
 import Team from './pages/Team/Team';
@@ -16,7 +17,10 @@ const App = () => {
       <Element name="projects" className="projects"><Projects /></Element>
       <Element name="team" className="team"><Team /></Element>
       <Element name="faq" className="faq"><FAQ /></Element>
+      <Footer />
     </div>
+
+    
   );
 }
 
