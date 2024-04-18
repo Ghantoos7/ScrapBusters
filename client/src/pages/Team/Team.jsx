@@ -1,72 +1,71 @@
 import React, { useState, useEffect } from 'react';
-
 import TeamMemberCard from '../../components/Teammembercard/Teammembercard';
 import './Team.css';
 
 import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import 'swiper/swiper-bundle.css';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-import IshanshImage from '../../assets/Ishansh.jpg'
-import LouisImage from '../../assets/Louis.jpg'
-import SharbelImage from '../../assets/Sharbel.jpg'
-import Mysteryguy from '../../assets/Mysteryguy.jpg'
+import IshanshImage from '../../assets/Ishansh.jpg';
+import LouisImage from '../../assets/Louis.jpg';
+import SharbelImage from '../../assets/Sharbel.jpg';
+import Mysteryguy from '../../assets/Mysteryguy.jpg';
+import { fetchWelcomeMessage } from '../../api/user';
 
-
-const teamMembers = [
+const teamMembersData = [
   {
     name: 'Ishansh',
     title: 'Senior Data Scientist',
-    message: 'Welcome message 1',
-    quote: 'Quote 1',
     image: IshanshImage,
     linkedin: 'https://www.linkedin.com/in/ishansh-gupta/',
-
   },
-
   {
     name: 'Louis',
     title: 'Senior Data Scientist',
-    message: 'Welcome message 2',
-    quote: 'Quote 2',
     image: LouisImage,
     linkedin: 'https://www.linkedin.com/in/louisheublein/',
-
   },
-
   {
     name: '?????????',
     title: 'Software Engineering Intern',
-    message: 'Welcome message 4',
-    quote: 'Quote 4',
     image: Mysteryguy,
-    linkedin:  'https://www.linkedin.com/in/georgio-ghnatios-33a295222/',
+    linkedin: 'https://www.linkedin.com/in/georgio-ghnatios-33a295222/',
   },
-
   {
     name: 'Sharbel',
     title: 'Senior Data Science Intern',
-    message: 'Welcome message 3',
-    quote: 'Quote 3',
     image: SharbelImage,
     linkedin: 'https://www.linkedin.com/in/sharbelabousabha/',
   },
-
-
 ];
 
 function Team() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
+  const [messages, setMessages] = useState([]);
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 1024);
     window.addEventListener("resize", handleResize);
-    handleResize();
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
+
+  useEffect(() => {
+    const description = "is the team leads the digitalization efforts in quality management, leveraging technologies like Palantir Foundry and AWS. You focus on improving engine production efficiency, reducing rework, and minimizing scrap rates in the production of rotors, stators, and other components.";
+    const fetchMessages = async () => {
+      const fetchedMessages = await Promise.all(teamMembersData.map(async member => {
+        return fetchWelcomeMessage(member.name, member.title, description);
+      }));
+      setMessages(fetchedMessages);
+    };
+
+    fetchMessages();
+    const intervalId = setInterval(fetchMessages, 45000);
+    return () => clearInterval(intervalId);
+  }, []); // Ensuring this runs only once on mount
 
   return (
     <div className="team-container">
@@ -79,8 +78,8 @@ function Team() {
         </div>
       </div>
       {isMobile ? (
-        teamMembers.map((member, index) => (
-          <TeamMemberCard key={index} {...member} />
+        teamMembersData.map((member, index) => (
+          <TeamMemberCard key={index} {...member} message={messages[index]} />
         ))
       ) : (
         <Swiper
@@ -99,9 +98,9 @@ function Team() {
           }}
           effect="coverflow"
         >
-          {teamMembers.map((member, index) => (
+          {teamMembersData.map((member, index) => (
             <SwiperSlide className="team-slide" key={index}>
-              <TeamMemberCard {...member} />
+              <TeamMemberCard {...member} message={messages[index]} />
             </SwiperSlide>
           ))}
         </Swiper>
