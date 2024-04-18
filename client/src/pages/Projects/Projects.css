@@ -5,7 +5,7 @@
     justify-content: space-around;
     align-items: flex-start;
     padding: 20px;
-    background-color: #f7f7f7;
+    background-color: var(--primary-color);
     text-align: center;
 }
 
@@ -13,6 +13,7 @@
 .Project-container h1 {
     width: 100%;
     margin-bottom: 40px;
+    color: var(--text-color);
 }
 
 /* Styles for the project cards */
@@ -52,7 +53,7 @@
 
 
 .circle1p {
-    background-color: var(--accent-color);
+    background-color: var(--text-color);
 }
 
 .circle2p {
@@ -60,5 +61,5 @@
 }
 
 .circle3p {
-    background-color: var(--primary-color);
+    background-color: var(--background-color);
 }
