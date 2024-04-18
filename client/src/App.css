@@ -1,3 +1,20 @@
+:root {
+  --primary-color: #2F4F4F; /* Dark Slate Gray */
+  --secondary-color: #8B4513; /* Saddle Brown (Rust Red) */
+  --background-color: #FFFFFF; /* White */
+  --text-color: #000000; /* Black */
+  --accent-color: #4682B4; /* Steel Blue */
+}
+
+[data-theme="dark"] {
+  --primary-color: #2F4F4F; /* Dark Slate Gray */
+  --secondary-color: #8B4513; /* Saddle Brown (Rust Red) */
+  --background-color: #000000; /* Black */
+  --text-color: #FFFFFF; /* White */
+  --accent-color: #4682B4; /* Steel Blue */
+}
+
+
 .App {
   text-align: center;
 }
@@ -13,3 +30,5 @@
   background: url('assets/junk-yard-cars-yard-junk.jpg') no-repeat center center/cover;
   filter: grayscale(60%);
 }
+
+

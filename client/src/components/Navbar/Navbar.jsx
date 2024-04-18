@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import './Navbar.css';
 
-
 const Navbar = () => {
+  const [theme, setTheme] = useState('light');
+
+  const toggleTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    document.documentElement.setAttribute('data-theme', newTheme);
+  };
+
   return (
     <nav className="navbar">
       <ul className="nav-links">
@@ -18,6 +25,11 @@ const Navbar = () => {
         </li>
         <li>
           <Link to="faq" spy={true} smooth={true} offset={-40} duration={500}>FAQ</Link>
+        </li>
+        <li>
+          <button onClick={toggleTheme} className="theme-toggle">
+            {theme === 'light' ? '🌙' : '☀️'}
+          </button>
         </li>
       </ul>
     </nav>
