@@ -56,11 +56,11 @@ const ThemeToggle = ({ theme, toggleTheme }) => {
           ...svgContainerProps
         }}
       >
-        <mask id="myMask">
+        <mask id="maskForThemeToggle">
           <rect x="0" y="0" width="100%" height="100%" fill="white" />
           <animated.circle cx={cx} cy={cy} r="9" fill="black" style={maskedCircleProps} />
         </mask>
-        <animated.circle cx="12" cy="12" r="5" fill="black" mask="url(#myMask)" style={centerCircleProps} />
+        <animated.circle cx="12" cy="12" r="5" fill="white" mask="url(#maskForThemeToggle)" style={centerCircleProps} />
         <animated.g stroke="currentColor" style={linesProps}>
           <line x1="12" y1="1" x2="12" y2="3" />
           <line x1="12" y1="21" x2="12" y2="23" />
