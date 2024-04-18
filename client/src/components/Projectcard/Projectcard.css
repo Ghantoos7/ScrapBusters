@@ -1,64 +1,56 @@
-/* Styles for individual project cards, using CSS variables for consistency and easier theme management */
 .project-card {
   width: 100%;
   max-width: 500px;
   padding: 30px;
   margin: 20px auto;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  background: var(--background-color); /* Consistent with site's background theme */
+  background: var(--background-color);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover effects */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
   position: relative;
   background-color: var(--background-color);
 }
 
-/* Enhances project card interactivity with a hover effect, adding larger shadow and slight upward movement */
 .project-card:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* More pronounced shadow for visual feedback */
-  transform: translateY(-10px); /* Moves card up to attract attention */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transform: translateY(-10px);
 }
 
-/* Full-size clickable area within each card for better user experience */
 .project-card a {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  text-decoration: none; /* Cleaner look without underlines */
+  text-decoration: none;
 }
 
-/* Ensures links inside cards do not change color after being clicked, maintaining visual consistency */
 .project-card a:visited {
-  color: inherit; /* Keeps the link color consistent with the rest of the card */
+  color: inherit; 
 }
 
-/* Styling for the project image, setting it to cover the top part of the card neatly */
 .project-image {
   width: 100%;
   height: 200px;
-  object-fit: cover; /* Ensures the image covers the allotted space without distortion */
-  border-radius: 8px 8px 0 0; /* Rounded corners at the top */
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
   margin-bottom: 20px;
 }
 
-/* Styling for the project title with larger font size for emphasis */
 .project-title {
   font-size: 1.5em;
   margin: 10px 0;
 }
 
-/* Detailed description styling for readability */
 .project-description {
   font-size: 1em;
   margin-bottom: 20px;
 }
 
-/* Flexible display of technology logos associated with the project */
 .technology-logos {
   display: flex;
   flex-wrap: wrap;
@@ -67,14 +59,12 @@
   margin-top: 20px;
 }
 
-/* Consistent sizing and spacing for each logo to ensure they are visually balanced */
 .technology-logo {
   height: 50px;
   width: auto;
   margin: 0 5px;
 }
 
-/* Responsive adjustments to maintain usability and appearance on smaller screens */
 @media (max-width: 768px) {
   .project-card {
     padding: 20px;
@@ -82,6 +72,6 @@
   }
 
   .project-image {
-    height: 150px; /* Slightly smaller to fit better on smaller screens */
+    height: 150px;
   }
 }

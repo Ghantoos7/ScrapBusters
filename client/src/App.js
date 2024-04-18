@@ -14,8 +14,8 @@ const App = () => {
     <div>
       <Navbar />
       <Element name="home" className="home"><Home /></Element>
-      <Element name="projects" className="projects"><Projects /></Element>
       <Element name="team" className="team"><Team /></Element>
+      <Element name="projects" className="projects"><Projects /></Element>
       <Element name="faq" className="faq"><FAQ /></Element>
       <Footer />
     </div>

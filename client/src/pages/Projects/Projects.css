@@ -12,7 +12,7 @@
 /* Styles for the project title */
 .Project-container h1 {
     width: 100%;
-    margin-bottom: 40px; 
+    margin-bottom: 40px;
 }
 
 /* Styles for the project cards */
@@ -46,7 +46,19 @@
 
     .project-card {
         width: auto;
-        margin: 20px 0; 
+        margin: 20px 0;
     }
 }
 
+
+.circle1p {
+    background-color: var(--accent-color);
+}
+
+.circle2p {
+    background-color: var(--secondary-color);
+}
+
+.circle3p {
+    background-color: var(--primary-color);
+}
