@@ -92,7 +92,7 @@ const Projects = () => {
       ) : (
         <Swiper
           modules={[Navigation]}
-          spaceBetween={50}
+          spaceBetween={40}
           slidesPerView={3}
           navigation={true}
         >
