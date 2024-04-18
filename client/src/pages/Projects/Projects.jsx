@@ -87,8 +87,6 @@ const Projects = () => {
           spaceBetween={50} 
           slidesPerView={3}
           navigation={true}
-          onSlideChange={() => console.log('slide change')}
-          onSwiper={(swiper) => console.log(swiper)}
         >
           {projects.map((project, index) => (
             <SwiperSlide key={index}>

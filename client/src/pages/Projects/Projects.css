@@ -12,7 +12,7 @@
 /* Styles for the project title */
 .Project-container h1 {
     width: 100%;
-    margin-bottom: 20px; /* Add some space between the title and the cards */
+    margin-bottom: 20px; 
 }
 
 /* Styles for the project cards */
@@ -46,7 +46,7 @@
 
     .project-card {
         width: auto;
-        margin: 20px 0; /* Only vertical margin on smaller screens */
+        margin: 20px 0; 
     }
 }
 

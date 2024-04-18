@@ -1,8 +1,8 @@
 import React from 'react';
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
 import Projects from './pages/Projects/Projects';
-import Team from './pages/Team';
+import Team from './pages/Team/Team';
 import FAQ from './pages/FAQ';
 import { Element } from 'react-scroll';
 import './App.css';
