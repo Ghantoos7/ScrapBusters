@@ -6,6 +6,7 @@
     padding: 20px;
     background-color: var(--background-color);
     text-align: center;
+    transition: background-color var(--transitiontime);
 
 }
 
@@ -51,25 +52,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0.5; /* Lower opacity for non-active cards */
+    opacity: 0.5; 
     transition: opacity 0.5s ease-in-out;
 }
 
 .team-slide.swiper-slide-active {
-    opacity: 1; /* Full opacity for the active slide */
-    transform: scale(1.1); /* Slightly scale up the active card */
+    opacity: 1; 
+    transform: scale(1.1); 
 }
 
 .team-slide.swiper-slide-next,
 .team-slide.swiper-slide-prev {
     opacity: 0.3;
     transform: scale(0.85);
-}
-
-.team-swiper .swiper-button-next, .team-swiper .swiper-button-prev {
-    color: #ffffff;
-    width: 50px;
-    height: 50px;
 }
 
 
@@ -84,6 +79,7 @@
   
   .circle3 {
     background-color: var(--secondary-color); 
+    
   }
   
   .guru-container p {

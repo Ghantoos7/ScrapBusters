@@ -9,7 +9,7 @@
   padding: 50px;
   box-sizing: border-box;
   overflow: hidden;
-  background: linear-gradient(to right, rgba(0, 123, 255, 0.8), rgba(32, 156, 238, 0.8));
+  background: linear-gradient(to right, var(--secondary-color), rgba(32, 156, 238, 0.8));
 }
 
 .content-box {

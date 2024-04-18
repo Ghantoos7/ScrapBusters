@@ -1,17 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');
+
 :root {
-  --primary-color: #2F4F4F; /* Dark Slate Gray */
-  --secondary-color: #8B4513; /* Saddle Brown (Rust Red) */
+  --primary-color: #808080; /* Grey */
+  --secondary-color: #0066B3; /* Steel Blue */
   --background-color: #FFFFFF; /* White */
   --text-color: #000000; /* Black */
-  --accent-color: #4682B4; /* Steel Blue */
+  --accent-color: #778899; /* Light Slate Gray */
+  --transitiontime: 0.5s ease;
 }
 
 [data-theme="dark"] {
-  --primary-color: #2F4F4F; /* Dark Slate Gray */
-  --secondary-color: #8B4513; /* Saddle Brown (Rust Red) */
-  --background-color: #000000; /* Black */
+  --primary-color: #404040; /* Dark Grey */
+  --secondary-color: #0066B3; /* Steel Blue */
+  --background-color: #232323; /* Black */
   --text-color: #FFFFFF; /* White */
-  --accent-color: #4682B4; /* Steel Blue */
+  --accent-color: #778899; /* Light Slate Gray */
 }
 
 
@@ -31,4 +34,56 @@
   filter: grayscale(60%);
 }
 
+body {
+  font-family: 'Noto Sans Mono', sans-serif;
+}
 
+.noto-sans-mono-light {
+  font-family: "Noto Sans Mono", monospace;
+  font-weight: 300;
+}
+
+.noto-sans-mono-regular {
+  font-family: "Noto Sans Mono", monospace;
+  font-weight: 400;
+}
+
+.noto-sans-mono-bold {
+  font-family: "Noto Sans Mono", monospace;
+  font-weight: 700;
+}
+
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 8px ;
+}
+
+.arrow {
+  margin-right: 30px;
+  color : var(--secondary-color)
+}
+
+
+.guru-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+
+.swiper-button-next, .swiper-button-prev {
+  color: var(--secondary-color);
+  width: 50px;
+  height: 50px;
+}

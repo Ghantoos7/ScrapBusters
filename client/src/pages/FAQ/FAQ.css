@@ -19,5 +19,7 @@
 
 .circle1f{
     background : var(--accent-color);
+    transition: background-color var(--transitiontime);
+
 }
 

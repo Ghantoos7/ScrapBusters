@@ -12,6 +12,8 @@
     margin: 50px;
     transition: transform 0.3s ease-in-out;
     background-color: var(--secondary-color);
+    transition: background-color var(--transitiontime);
+
 }
 
 

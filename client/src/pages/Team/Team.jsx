@@ -78,7 +78,6 @@ function Team() {
         ))
       ) : (
         <Swiper
-          className="team-swiper"
           modules={[Navigation]}
           spaceBetween={30}
           slidesPerView={3}
