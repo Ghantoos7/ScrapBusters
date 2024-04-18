@@ -55,8 +55,8 @@ const Accordion = ({ title, content, isOpen, onTitleClick }) => {
                         strings: [content],
                         autoStart: isOpen,
                         loop: true,
-                        delay: 25,
-                        deleteSpeed: 50,
+                        delay: 20,
+                        deleteSpeed: 15,
                         pauseFor: 30000,
                     }}
                 />

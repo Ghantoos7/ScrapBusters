@@ -10,7 +10,6 @@
   box-sizing: border-box;
   overflow: hidden;
   background: linear-gradient(to right, var(--secondary-color), rgba(32, 156, 238, 0.8));
-  margin-bottom: 128px;
 }
 
 .content-box {
