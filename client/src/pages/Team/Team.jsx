@@ -8,6 +8,7 @@ import 'swiper/swiper-bundle.css';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
+
 import IshanshImage from '../../assets/Ishansh.jpg';
 import LouisImage from '../../assets/Louis.jpg';
 import SharbelImage from '../../assets/Sharbel.jpg';
@@ -54,18 +55,18 @@ function Team() {
   }, []);
 
   useEffect(() => {
-    const description = "is the team leads the digitalization efforts in quality management, leveraging technologies like Palantir Foundry and AWS. You focus on improving engine production efficiency, reducing rework, and minimizing scrap rates in the production of rotors, stators, and other components.";
+    const description = "is the team leads the digitalization efforts in quality management, leveraging technologies like Palantir Foundry and AWS. the focus on improving engine production efficiency, reducing rework, and minimizing scrap rates in the production of rotors, stators, and other components.";
     const fetchMessages = async () => {
       const fetchedMessages = await Promise.all(teamMembersData.map(async member => {
         return fetchWelcomeMessage(member.name, member.title, description);
       }));
       setMessages(fetchedMessages);
     };
-
+  
     fetchMessages();
-    const intervalId = setInterval(fetchMessages, 45000);
+    const intervalId = setInterval(fetchMessages, 20000);
     return () => clearInterval(intervalId);
-  }, []); // Ensuring this runs only once on mount
+  }, []);
 
   return (
     <div className="team-container">
