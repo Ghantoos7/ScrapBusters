@@ -4,9 +4,11 @@
     justify-content: space-around;
     align-items: flex-start;
     padding: 20px;
-    background-color: var(--background-color);
     text-align: center;
-    transition: background-color var(--transitiontime);
+    margin-bottom: 128px;
+    margin-top: 128px;
+    max-width: 1024px;
+    width:100%;
 
 }
 

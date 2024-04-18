@@ -10,6 +10,7 @@
   box-sizing: border-box;
   overflow: hidden;
   background: linear-gradient(to right, var(--secondary-color), rgba(32, 156, 238, 0.8));
+  margin-bottom: 128px;
 }
 
 .content-box {
@@ -61,7 +62,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .text-content h1, .text-content p {
     font-size: 90%;
   }

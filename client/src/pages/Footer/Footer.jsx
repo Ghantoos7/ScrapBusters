@@ -9,7 +9,7 @@ import youtubeLogo from '../../assets/icons/youtube.svg';
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer-container">
       <div className="footer-info">
         <p>© 2024  Scrap Busters. All rights reserved.</p>
       </div>
