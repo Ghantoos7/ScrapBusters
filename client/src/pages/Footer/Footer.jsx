@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import logo from '../../assets/Mysteryguy.jpg'; 
+import logo from '../../assets/logo.svg'
 import facebookLogo from '../../assets/icons/facebook.svg'; 
 import twitterLogo from '../../assets/icons/x.svg'; 
 import instagramLogo from '../../assets/icons/instagram.svg'; 
