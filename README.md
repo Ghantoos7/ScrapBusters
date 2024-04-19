@@ -97,10 +97,27 @@ Frameworks<br>
     npm install
     ```
 6. **Set The URL of the backend API server**
+
     Create another .env file (in client directory) and inside put
 
     ```bash
     REACT_APP_API_URL=http://localhost:5000
+    ```
+    make sure that Flask is running on port 5000.
+
+7. **Start the Server**
+
+    ```bash
+    cd server
+
+    python app.py
+    ```
+8. **Launch the website**:
+
+    ```bash
+    cd client
+    
+    npm start
     ```
 <br>
 
