@@ -4,10 +4,12 @@ import './Accordion.css';
 
 import { fetchAnswer } from '../../api/user';
 
+// Accordion component that fetches and displays an answer when opened
 const Accordion = ({ title, description, isOpen, onTitleClick }) => {
     const [content, setContent] = useState('');
     const contentRef = useRef(null);
 
+    // Function to fetch an answer when the accordion title is clicked
     const handleTitleClick = () => {
         if (!isOpen) {
           setContent('');
@@ -20,6 +22,7 @@ const Accordion = ({ title, description, isOpen, onTitleClick }) => {
         }
         onTitleClick();
       };
+    // Effect to update the height of the accordion content when it's open
     useEffect(() => {
         const contentElement = contentRef.current;
         let observer;

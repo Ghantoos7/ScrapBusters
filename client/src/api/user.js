@@ -1,5 +1,6 @@
 const BASE_URL = process.env.REACT_APP_API_URL;
 
+// Function to fetch a welcome message from the backend
 export const fetchWelcomeMessage = async (name, title, description) => {
     try {
        
@@ -19,7 +20,7 @@ export const fetchWelcomeMessage = async (name, title, description) => {
     }
 };
 
-
+// Function to fetch an answer to a question from the backend
 export const fetchAnswer = async (question, description) => {
     try {
         const url = new URL(`${BASE_URL}/api/v0/questions/questions`);

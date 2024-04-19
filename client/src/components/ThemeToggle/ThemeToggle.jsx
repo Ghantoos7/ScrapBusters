@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSpring, animated } from 'react-spring';
 
+// Icon for dark and light mode made from svg (dont know how it work copied it from an article)
 const ThemeToggle = ({ theme, toggleTheme }) => {
   const properties = {
     dark: {

@@ -47,6 +47,7 @@ function Team() {
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
+    // Update isMobile state on window resize
     const handleResize = () => setIsMobile(window.innerWidth < 1024);
     window.addEventListener("resize", handleResize);
     return () => {
@@ -73,6 +74,7 @@ function Team() {
     const intervalId = setInterval(fetchMessages, 12000);
     return () => clearInterval(intervalId);
   }, []);
+
   return (
     <div className="team-container">
       <div className="header-container">
@@ -84,10 +86,12 @@ function Team() {
         </div>
       </div>
       {isMobile ? (
+        // Render team member cards in a list for mobile view
         teamMembersData.map((member, index) => (
           <TeamMemberCard key={index} {...member} message={messages[index]} />
         ))
       ) : (
+        // Render team member cards in a swiper carousel for desktop view
         <Swiper
           modules={[Navigation]}
           spaceBetween={30}

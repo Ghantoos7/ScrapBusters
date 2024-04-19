@@ -15,6 +15,7 @@ import ReduxLogo from '../../assets/logos/redux.svg';
 import CSSLogo from '../../assets/logos/css.svg';
 import TerraformLogo from '../../assets/logos/terraform-enterprise.svg';
 
+// Mapping technology names to their corresponding logos
 const techLogos = {
   'AWS': AWSLogo,
   'Python': PythonLogo,

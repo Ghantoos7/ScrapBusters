@@ -3,6 +3,7 @@ import { Link } from 'react-scroll';
 import './Navbar.css';
 import ThemeToggle from '../ThemeToggle/ThemeToggle'; 
 
+// Navbar component that includes links to different sections of the page and a theme toggle
 const Navbar = () => {
   const [theme, setTheme] = useState('light');
   const [isOpen, setIsOpen] = useState(false); 
