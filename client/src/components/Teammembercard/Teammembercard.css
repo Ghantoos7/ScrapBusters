@@ -16,8 +16,6 @@
 
 }
 
-
-
 .team-member-card:hover {
     transform: scale(1.05);
     box-shadow: 0px 10px 30px var(--accent-color)

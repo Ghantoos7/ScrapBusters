@@ -27,3 +27,13 @@
   font-size: 2em;
   color: white;
 }
+
+@media (max-width: 1024px) {
+  .company-name {
+    font-size: 2em;
+  }
+
+  .company-description {
+    font-size: 1em;
+  }
+}
