@@ -7,7 +7,9 @@
   <img src="./client/src/assets/logo.svg" width="200px" height="150px">
 </p>
 
+<p align="center">
 <img src="./readme-assets/card.svg"/>
+</p>
 
 <div align="center">
 
@@ -48,7 +50,10 @@ Hello world! As part of our software engineering internship at ScrapBusters Inc.
 
 <br><br>
 
+<p align="center">
 <img src="./readme-assets/tech-stacks.svg"/>
+</p>
+
 <p align="left">
 Languages <br>
 
