@@ -1,8 +1,10 @@
 from flask import Blueprint, jsonify, request
 from api.utils import generate_gpt_response
 
+# Blueprint for messages routes
 messages_blueprint = Blueprint('messages', __name__)
 
+# Route to generate a welcome message using GPT-3
 @messages_blueprint.route('/messages', methods=['GET'])
 def generate_welcome_message():
     name = request.args.get('name', default='Guest', type=str)

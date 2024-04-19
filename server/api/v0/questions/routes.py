@@ -1,8 +1,10 @@
 from flask import Blueprint, jsonify, request
 from api.utils import generate_gpt_response
 
+# Blueprint for questions routes
 questions_blueprint = Blueprint('questions', __name__)
 
+# Route to generate an answer to a question using GPT-3
 @questions_blueprint.route('/questions', methods=['GET'])
 def answer_question():
     question = request.args.get('question', default='', type=str)
