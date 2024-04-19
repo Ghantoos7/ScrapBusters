@@ -55,19 +55,24 @@ function Team() {
   }, []);
 
   useEffect(() => {
-    const description = "is the team leads the digitalization efforts in quality management, leveraging technologies like Palantir Foundry and AWS. the focus on improving engine production efficiency, reducing rework, and minimizing scrap rates in the production of rotors, stators, and other components.";
+    const description = "...";
     const fetchMessages = async () => {
       const fetchedMessages = await Promise.all(teamMembersData.map(async member => {
-        return fetchWelcomeMessage(member.name, member.title, description);
+        try {
+          const message = await fetchWelcomeMessage(member.name, member.title, description);
+          return message;
+        } catch (error) {
+          console.error(`Failed to fetch message for ${member.name}:`, error);
+          return "Welcome to the Team! my Name is " + member.name + " and I am a " + member.title + " at Scrap Busters";
+        }
       }));
       setMessages(fetchedMessages);
     };
   
     fetchMessages();
-    const intervalId = setInterval(fetchMessages, 20000);
+    const intervalId = setInterval(fetchMessages, 100000);
     return () => clearInterval(intervalId);
   }, []);
-
   return (
     <div className="team-container">
       <div className="header-container">

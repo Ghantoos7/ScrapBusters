@@ -1,10 +1,25 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import Typewriter from 'typewriter-effect';
 import './Accordion.css';
 
-const Accordion = ({ title, content, isOpen, onTitleClick }) => {
+import { fetchAnswer } from '../../api/user';
+
+const Accordion = ({ title, description, isOpen, onTitleClick }) => {
+    const [content, setContent] = useState('');
     const contentRef = useRef(null);
 
+    const handleTitleClick = () => {
+        if (!isOpen) {
+          setContent('');
+          fetchAnswer(title, description)
+            .then(answer => setContent(answer))
+            .catch(error => {
+              console.error('Error fetching answer:', error);
+              setContent(description); 
+            });
+        }
+        onTitleClick();
+      };
     useEffect(() => {
         const contentElement = contentRef.current;
         let observer;
@@ -38,13 +53,13 @@ const Accordion = ({ title, content, isOpen, onTitleClick }) => {
                 observer.disconnect();
             }
         };
-    }, [isOpen]);
+    }, [isOpen, content]);
 
     return (
         <div className="accordion-wrapper">
             <div 
                 className={`accordion-title ${isOpen ? "open" : ""}`} 
-                onClick={onTitleClick}
+                onClick={handleTitleClick}
             >
                 {title}
                 <span className="accordion-icon">{isOpen ? '▼' : '►'}</span>
@@ -56,8 +71,8 @@ const Accordion = ({ title, content, isOpen, onTitleClick }) => {
                         autoStart: isOpen,
                         loop: true,
                         delay: 20,
-                        deleteSpeed: 15,
-                        pauseFor: 30000,
+                        deleteSpeed: 10,
+                        pauseFor: 10000,
                     }}
                 />
             </div>

@@ -14,6 +14,6 @@ app.register_blueprint(questions_blueprint, url_prefix='/api/v0/questions')
 app.register_blueprint(chatbot_blueprint, url_prefix='/api/v0/chatbot')
 
 
-if __name__ == 'main':
-    app.run(debug=True)
 
+if __name__ == '__main__':
+    app.run(debug=True)
