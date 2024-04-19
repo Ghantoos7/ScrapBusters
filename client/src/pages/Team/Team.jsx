@@ -55,7 +55,7 @@ function Team() {
   }, []);
 
   useEffect(() => {
-    const description = "...";
+    const description = "is the team leads the digitalization efforts in quality management, leveraging technologies like Palantir Foundry and AWS. You focus on improving engine production efficiency, reducing rework, and minimizing scrap rates in the production of rotors, stators, and other components.";
     const fetchMessages = async () => {
       const fetchedMessages = await Promise.all(teamMembersData.map(async member => {
         try {
@@ -70,7 +70,7 @@ function Team() {
     };
   
     fetchMessages();
-    const intervalId = setInterval(fetchMessages, 100000);
+    const intervalId = setInterval(fetchMessages, 12000);
     return () => clearInterval(intervalId);
   }, []);
   return (

@@ -11,8 +11,7 @@ def generate_welcome_message():
     
     prompt = (
         f"Craft a brief message, 10 to 15 words, where {name}, our {title}, either personally "
-        f"welcomes a visitor or shares a quote related to {description}. Ensure the tone is warm and inviting. "
-        "If using a quote, make it relevant to their expertise and role."
+        f"welcomes a visitor using {description}. Ensure the tone is warm and inviting and dont make it cringy"
     )    
     
     try:
