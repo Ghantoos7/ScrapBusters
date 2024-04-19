@@ -126,7 +126,21 @@ Frameworks<br>
     ```
 <br>
 
+### System Qualities
 
+- **Scalability**: The website is designed to handle increasing amounts of work or a larger number of transactions effectively, ensuring that it can grow seamlessly with the organization's needs.
+
+- **Portability**: Built with cross-platform compatibility in mind, the website runs efficiently across various devices and operating systems, ensuring a broad accessibility.
+
+- **Maintainability**: The architecture and design patterns used facilitate easy updates and maintenance. The system's code is well-documented, simplifying the process of future enhancements and debugging.
+
+- **Adherence to Design Patterns**: The development of the website follows established design patterns, promoting code reusability and the principles of good software architecture, which enhances both the performance and reliability of the application.
+
+
+
+### License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 
 
